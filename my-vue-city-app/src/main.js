@@ -20,13 +20,18 @@ new Vue({
     // 1.메서드명은 반드시 문자형으로 입력하기
     // 2.파라미터는 단일값 또는 객체형식으로 보낼 수 있음 (=파라미터 값을 여러개 보내고 싶을 땐 객체로도 보낼 수 있음)
     // 인스턴스 내부 구역에 코딩시에는 store에 $를 붙이지 않음
+    
     // store.commit("initSet", "https://img.freepik.com/premium-vector/city-illustration_23-2147514701.jpg"); // 👉 파라미터로 단일값 보낸 경우
-    store.commit("initSet",
-    {
-        url:"https://img.freepik.com/premium-vector/city-illustration_23-2147514701.jpg",
-        txt:"도시 소개에 오신 것을 환영합니다."
-    }
-    );
+
+    // store.commit("initSet",
+    // {
+    //     url:"https://img.freepik.com/premium-vector/city-illustration_23-2147514701.jpg",
+    //     txt:"도시 소개에 오신 것을 환영합니다."
+    // }
+    // );
+
+    // 인트로 데이터도 안으로 가지고 들어가기!!
+    store.commit("initSet");
 
     // actions 메서드 호출하기 : dispatch("메서드명", "전달값") 사용하기
     store.dispatch("myAct", "나야나");
